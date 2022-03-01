@@ -25,6 +25,7 @@ func _initiate_board() -> void:
 func move() -> void:
 	moves += 1
 	var result = check_win()
+	print(result)
 	update_label(result)
 	GameConfig.move()
 
@@ -40,11 +41,10 @@ func check_win() -> bool:
 	
 	#check columns
 	for i in range(3):
-		result = true
 		var temp = board[0][i].status
-		for j in range(1,3):
-			if board[j][i].status != temp:
-				result = false
+		if temp != -1:
+			if board[1][i].status == temp && board[2][i].status == temp:
+				result = true
 	
 	#check diagonal
 	if board[1][1].status != -1:

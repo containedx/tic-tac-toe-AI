@@ -13,6 +13,10 @@ config_version=4
 config/name="Tic Tac Toe Ai"
 config/icon="res://icon.png"
 
+[autoload]
+
+GameConfig="*res://main_scene/game_config.gd"
+
 [physics]
 
 common/enable_pause_aware_picking=true

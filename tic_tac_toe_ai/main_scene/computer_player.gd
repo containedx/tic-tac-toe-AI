@@ -47,21 +47,23 @@ func minimax(board : Array, depth, is_max) -> int:
 				if board[i][j] == -1: #if avaiable
 					board[i][j] = 0 #computer ai move
 					var score = minimax(board, depth + 1, false)
+					board[i][j] = -1
 					best_score = max(score, best_score)
 		
 		return best_score
 	
 	else : #calculating worst senario for human
-		var best_score = +INF
+		var worst_score = +INF
 		
 		for i in range(3):
 			for j in range(3):
 				if board[i][j] == -1: #if avaiable
 					board[i][j] = 1 #human move
 					var score = minimax(board, depth + 1, true)
-					best_score = min(score, best_score)
+					board[i][j] = -1
+					worst_score = min(score, worst_score)
 		
-		return best_score
+		return worst_score
 
 
 

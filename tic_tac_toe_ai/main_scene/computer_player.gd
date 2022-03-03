@@ -35,31 +35,32 @@ func make_move(board : Array) -> void:
 
 
 func minimax(board : Array, depth, is_max) -> int:
-	print("minimax 0")
 	var result = check_win(board)
 	if result != -1 : # => someone won
 		return count_score(result)
 	
 	if is_max : #calculating computer best move
-		print("minimax max")
 		var best_score = -INF
+		
 		for i in range(3):
 			for j in range(3):
 				if board[i][j] == -1: #if avaiable
 					board[i][j] = 0 #computer ai move
 					var score = minimax(board, depth + 1, false)
 					best_score = max(score, best_score)
+		
 		return best_score
 	
 	else : #calculating worst senario for human
-		print("minimax min")
-		var best_score = -INF
+		var best_score = +INF
+		
 		for i in range(3):
 			for j in range(3):
 				if board[i][j] == -1: #if avaiable
 					board[i][j] = 1 #human move
 					var score = minimax(board, depth + 1, true)
 					best_score = min(score, best_score)
+		
 		return best_score
 
 

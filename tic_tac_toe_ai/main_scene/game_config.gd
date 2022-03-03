@@ -15,3 +15,6 @@ func change_current() -> void:
 
 func move() -> void:
 	GameConfig.change_current()
+
+
+

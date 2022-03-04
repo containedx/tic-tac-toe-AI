@@ -9,6 +9,7 @@ var game_over : bool = false
 func _ready() -> void:
 	_on_restart()
 	_initiate_board()
+	
 
 func reset() -> void:
 	$result.visible = true
@@ -30,7 +31,9 @@ func move() -> void:
 	moves += 1
 	var result = check_win(board)
 	update_label(result)
-	if GameConfig.current == false : # if O
+	print("RESULT ", result)
+	if GameConfig.current == false && moves != 9 && result == -1: # if O
+		print("computer going")
 		computer_turn()
 
 func computer_turn() -> void:

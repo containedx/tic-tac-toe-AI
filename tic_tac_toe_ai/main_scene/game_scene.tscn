@@ -1,22 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://main_scene/game_controller.gd" type="Script" id=1]
 [ext_resource path="res://assets/label.png" type="Texture" id=2]
 [ext_resource path="res://main_scene/board_piece.tscn" type="PackedScene" id=3]
 [ext_resource path="res://main_scene/computer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/background.jpeg" type="Texture" id=5]
 
 [node name="game_scene" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 1 )
 
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 5 )
+expand = true
+
 [node name="title" type="TextureRect" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -235.0
-margin_top = 7.0
-margin_right = 365.0
-margin_bottom = 207.0
+margin_left = -299.0
+margin_top = 10.0
+margin_right = 301.0
+margin_bottom = 210.0
 rect_scale = Vector2( 0.8, 0.8 )
 texture = ExtResource( 2 )
 
@@ -25,11 +32,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -201.0
-margin_top = -110.0
-margin_right = -21.9999
-margin_bottom = -78.0
-rect_scale = Vector2( 2.5, 2.5 )
+margin_left = -215.0
+margin_top = -103.0
+margin_right = -36.0
+margin_bottom = -71.0
+rect_scale = Vector2( 1.8, 1.8 )
+custom_colors/font_color = Color( 0.0745098, 0.0470588, 0.541176, 1 )
 text = "X turn"
 align = 1
 valign = 1
@@ -39,10 +47,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -139.0
-margin_top = -138.0
-margin_right = 469.0
-margin_bottom = 470.0
+margin_left = -203.0
+margin_top = -135.0
+margin_right = 405.0
+margin_bottom = 473.0
 rect_scale = Vector2( 0.5, 0.5 )
 
 [node name="row1" type="HBoxContainer" parent="board"]

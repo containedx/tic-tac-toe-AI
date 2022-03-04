@@ -7,12 +7,19 @@ var moves = 0
 var game_over : bool = false
 
 func _ready() -> void:
-	_on_restart()
 	_initiate_board()
+	
+	if GameConfig.who_starts == 'computer':
+		_on_restart(0)
+		move()
+	else :
+		print(GameConfig.current)
+		_on_restart(0)
+
 	
 
 func reset() -> void:
-	$result.visible = true
+	$restart.visible = true
 	for row in board :
 		for piece in row : 
 			piece.make_not_interactive()
@@ -85,12 +92,17 @@ func check_win(board : Array) -> int:
 	
 	return result
 
-func _on_restart() -> void:
-	$result.visible = false
+func _on_restart(who : bool) -> void:
+	$restart.visible = false
 	for row in board :
 		for piece in row : 
 			piece.reset()
 	game_over = false
 	moves = 0
-	GameConfig.current = 0
+	GameConfig.current = who
+	print(GameConfig.current)
 	update_label(-1)
+
+
+func _on_restart_button_down():
+	get_tree().change_scene("res://menu/menu.tscn")

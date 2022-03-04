@@ -1,5 +1,7 @@
 extends Node
 
+var who_starts = 'human'
+
 var x : String = "res://assets/x.png"
 var o : String = "res://assets/o.png"
 

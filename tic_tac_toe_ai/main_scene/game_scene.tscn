@@ -127,7 +127,7 @@ margin_left = 408.0
 margin_right = 608.0
 margin_bottom = 200.0
 
-[node name="result" type="Button" parent="."]
+[node name="restart" type="Button" parent="."]
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -139,4 +139,4 @@ text = "RESTART"
 
 [node name="computer" parent="." instance=ExtResource( 4 )]
 
-[connection signal="button_down" from="result" to="." method="_on_restart"]
+[connection signal="button_down" from="restart" to="." method="_on_restart_button_down"]

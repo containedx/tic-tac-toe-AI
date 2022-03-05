@@ -8,7 +8,7 @@ When AI goes first - you have to put X in the middle not to loose. Every other m
 If human (you) goes first there is also no way to win with AI. Your best chance is a tie. 
 
 ![](tic_tac_toe_ai/presentation/game0.gif)
-![](tic_tac_toe_ai/presentation/game1.gif)
+![](https://im4.ezgif.com/tmp/ezgif-4-54f35a9428.gif)
 ![](tic_tac_toe_ai/presentation/game2.gif)
 ![](tic_tac_toe_ai/presentation/game3.gif)
 ![](tic_tac_toe_ai/presentation/game4.gif)

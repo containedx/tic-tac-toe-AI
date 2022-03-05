@@ -1,17 +1,11 @@
 extends Control
 
-# TESTTT
-var board0 = [[1, 1, -1], [-1, 0, -1], [-1,-1,-1]]
-
 	
 func make_move(board : Array) -> void:
 	yield(get_tree().create_timer(0.5), "timeout")
-	print("computer is making move")
 	
 	#board with tatus values only
 	var test_board = copy_board(board)
-	print ("test board ", test_board)
-	#print(test_board)
 	
 	var best_score = -10000
 	var move_coordinates = {
@@ -33,8 +27,6 @@ func make_move(board : Array) -> void:
 	
 	
 	#make move
-	print("best score" , best_score)
-	print(move_coordinates)
 	board[move_coordinates.x][move_coordinates.y]._on_button_pressed_up()
 
 

@@ -1,4 +1,5 @@
 # TIC TAC TOE with AI PLAYER
+[PLAY HERE](https://containedx.itch.io/tic-tac-toe-ai)
 
 Known to all minigame - tic tac toe, with intelligent opponent. Created with **Minimax Algorithm**. 
 
@@ -13,3 +14,9 @@ If human (you) goes first there is also no way to win with AI. Your best chance 
 ![](tic_tac_toe_ai/presentation/game3.gif)
 ![](tic_tac_toe_ai/presentation/game4.gif)
 ![](tic_tac_toe_ai/presentation/game5.gif)
+
+
+EDIT:
+updated visuals
+
+![](tic_tac_toe_ai/presentation/edit.gif)

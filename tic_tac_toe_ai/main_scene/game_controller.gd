@@ -16,7 +16,9 @@ func _ready() -> void:
 		print(GameConfig.current)
 		_on_restart(0)
 
-	
+func _input(event):
+	if Input.is_action_pressed("escape"):
+		get_tree().change_scene("res://menu/menu.tscn")
 
 func reset() -> void:
 	$restart.visible = true

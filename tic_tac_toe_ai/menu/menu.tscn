@@ -74,4 +74,4 @@ text = "credits & info"
 
 [connection signal="button_down" from="VBoxContainer/computer" to="." method="_on_computer_button_down"]
 [connection signal="button_down" from="VBoxContainer/human" to="." method="_on_human_button_down"]
-[connection signal="button_down" from="VBoxContainer/credits" to="." method="_on_human_button_down"]
+[connection signal="button_down" from="VBoxContainer/credits" to="." method="_on_credits_button_down"]
